@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <script>
+        let a = 2,
+            b = 4;
+        let multi = number => number * 3; //1 tham số, 1 biểu thức
+        console.log(multi(a));
+
+        let sum = (firstnumber, secondnumber) => firstnumber + secondnumber; // nhiều tham số, biểu thức đơn giản ko cần return
+        let sum2 = (firstnumber, secondnumber) => { // nhiều tham số, có từ 2 biểu thức thì sử dụng return
+            secondnumber *= 2;
+            return firstnumber + secondnumber;
+        }
+        console.log(sum(a, b));
+        console.log(sum2(a, b));
+
+        let multiby3 = number => { //1 tham số, nhiều câu lệnh
+            let multi = 3;
+            return number * multi;
+        }
+        console.log(multiby3(6));
+
+        let hello = (name, age = 1) => {   //default value
+            return "hello " + name + " - " + age;
+        }
+        console.log(hello("Tim", "22"));
+    </script>
+</body>
+
+</html>
